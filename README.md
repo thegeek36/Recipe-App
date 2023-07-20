@@ -17,10 +17,12 @@
   </li>
 </ul>
 <h2>Some Screenshots :</h2>
-![Screenshot 2023-07-20 184711](https://github.com/thegeek36/Recipe-App/assets/76440306/458781cb-be36-4f50-b17d-cba24d2336b3)
-![Screenshot 2023-07-20 184742](https://github.com/thegeek36/Recipe-App/assets/76440306/b79e789c-da02-4fc7-b2f2-2f87e85e7c97)
-![Screenshot 2023-07-20 184819](https://github.com/thegeek36/Recipe-App/assets/76440306/042b7d57-13f2-4411-a821-b1a4c1c86a12)
-![Screenshot 2023-07-20 184858](https://github.com/thegeek36/Recipe-App/assets/76440306/1f45e24e-1fe0-4662-8251-497e064b561d)
 
-![Screenshot 2023-07-20 184950](https://github.com/thegeek36/Recipe-App/assets/76440306/9f63c242-387c-4614-a518-a472a59383da)
-![Screenshot 2023-07-20 185043](https://github.com/thegeek36/Recipe-App/assets/76440306/6faab1de-c021-4f87-9ef1-5db7510f0312)
+![Screenshot 2023-07-20 184711](https://github.com/thegeek36/Recipe-App/assets/76440306/682ff434-7013-4b85-aa5f-99309d9a8ac7)
+![Screenshot 2023-07-20 184742](https://github.com/thegeek36/Recipe-App/assets/76440306/b80ff978-9830-4ec1-b516-284e464ede7e)
+![Screenshot 2023-07-20 184819](https://github.com/thegeek36/Recipe-App/assets/76440306/4305a47c-73fe-4200-9817-e2b94a200bc2)
+![Screenshot 2023-07-20 184858](https://github.com/thegeek36/Recipe-App/assets/76440306/ea2c50f3-1251-45bf-b85e-104b9fdb8d21)
+![Screenshot 2023-07-20 184936](https://github.com/thegeek36/Recipe-App/assets/76440306/1b064bfa-10e4-40e5-af2d-57d4468d1d50)
+![Screenshot 2023-07-20 184950](https://github.com/thegeek36/Recipe-App/assets/76440306/c43d248b-76f9-4abf-92a8-d5f32b7b54a3)
+![Screenshot 2023-07-20 185017](https://github.com/thegeek36/Recipe-App/assets/76440306/4290231c-40de-4a8c-ad97-063cf11e41e7)
+![Screenshot 2023-07-20 185043](https://github.com/thegeek36/Recipe-App/assets/76440306/1dfe728b-9e56-4967-9c1b-990bc2206802)
