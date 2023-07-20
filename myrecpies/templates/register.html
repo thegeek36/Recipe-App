@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}
+    Signup
+{% endblock title %}
+{% block start %}
+
+<div class = "container mt-5 mb-3" style >
+    <form class="row g-3 p-4 " method="POST" enctype="multipart/form-data" style="background-color: rgb(255, 255, 255);border-radius: 8%;">
+      {% csrf_token %}
+        <H2>Register</H2>
+        <p style="padding-left: 3%;color: rgb(123, 121, 121);">Save recipes,write reviews,and share your own photos</p>
+        {% if messages %}
+        <div class="alert alert-primary" role="alert">
+          {% for message in messages %}
+          {{ message }}
+          {% endfor %}
+        </div>
+        {% endif %}
+        <hr color="black" style="color: rgb(0, 0, 0);">
+        <div class="row">
+        <!-- <div class="mb-3"> -->
+          <div class="col">
+            <label for="exampleInputEmail1"  class="form-label">First Name</label>
+            <input  type="text" placeholder="Enter Your First Name" name = "first_name" class="form-control" required>
+          </div>
+        
+        <!-- <div class="mb-3"> -->
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <input  type="text" placeholder="Enter Your Surname" name = "last_name" class="form-control" required>
+          </div>
+        
+        </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input  type="text" name = "username" placeholder="Enter your  unique username" class="form-control" required>
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input  type="email" name = "email" placeholder="your@email.com" class="form-control" required>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1"  class="form-label">Password</label>
+          <input  type="password" name  = "password" placeholder="Password" class="form-control" required>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1">I agree to the Visitor Agreement and have read the Privacy Notice. I understand <a href="/">MyRecipes.com</a>  may use my email address to send updates, ads, and offers. Learn more here.</label>
+        </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-success">Register</button>
+        </div>
+        <div id="emailHelp" class="form-text">Already have an account <a href = '/login_page/' style="text-decoration:none;"><b>Login </b></a>here.</div>
+      </form>
+      </div>
+</div>
+
+{% endblock %}

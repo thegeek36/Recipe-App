@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}
+    Login
+{% endblock title %}
+{% block start %}
+
+<div class = "container mt-5" style="padding-bottom: 5%;" >
+    <form class="row g-3 p-4" method="POST" enctype="multipart/form-data" style="background-color:rgba(255, 255, 255, 0.8);backdrop-filter: blur(5px); border-radius: 8%;">
+      {% csrf_token %}
+        <H2>Login</H2>
+        {% if messages %}
+        <div class="alert alert-primary" role="alert">
+          {% for message in messages %}
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="text-align: end;"></button>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <hr style="color: rgb(0, 0, 0);">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <input name = "username" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label ">Password</label>
+          <input name = "password" type="password" class="form-control" required>
+        </div>
+        <br>
+          <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-success">Login</button>
+        </div>
+        <div id="emailHelp" class="form-text">Do not have account <a href = '/register/' style="text-decoration:none;"><B>Register</b> </a>here.</div>
+      </form>
+      </div>
+</div>
+
+{% endblock %}

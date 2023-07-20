@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+    Recipes
+{% endblock title %}
+{% block start %}
+
+{% if recipes|length == 0 %}
+<div class="alert alert-danger" role="alert">
+  No Recipes available add some recipes <a href="/recipe/">here</a>
+  </div>
+{% endif %}
+<br>
+<br>
+
+<!-- <div class="card mb-3 container mt-8" style="width: 70rem; border-radius:2%;" >
+    <center>
+      <img src="/media/{{recipe.recipe_image}}" class="card-text" alt="Image" width="700px" height="600px" style="padding: 3%; border-radius: 7%;">
+    </center>
+    <div class="card-body">
+      <h5 class="card-title">{{forloop.counter}}. {{recipe.recipe_name}}</h5>
+      <p class="card-text">{{recipe.recipe_description}} <a href="/recipe_detail/{{recipe.id}}/">....</a></p>
+    </div>
+    <div class = "card-body">
+      <a href = "/delete_recipe/{{recipe.id}}/" type="button" class="btn btn btn-danger btn-sm mx-1 n-2">Delete</a>
+      
+      <a href = "/update_recipe/{{recipe.id}}" type="button" class="btn btn btn-info btn-sm mx-1">Update</a>
+    </div>
+  </div> -->
+  {% include 'card.html' %}
+  
+  {% if recipes|length != 0 %}
+  <div class="mb-3 text-center">
+    <a href="/recipe/">
+      <button type="submit" class="btn btn-primary vertical-center">Add More</button>
+    </a>
+  </div>
+  {% endif %}
+  
+  
+{% endblock %}
+  

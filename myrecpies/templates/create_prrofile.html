@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+    Create Profile
+{% endblock title %}
+{% block start %}
+<div class = "container mt-5" style="padding-bottom: 2%;">
+    <form class="col-6 mx-auto p-3 shadow-lg" method="POST" enctype="multipart/form-data" style="background-color: rgb(255, 255, 255);border-radius: 8%;">
+      {% csrf_token %}
+      {% if messages %}
+      <div class="alert alert-primary" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="text-align: end;"></button>
+        {% endfor %}
+      </div>
+      {% endif %}
+        <H2>Add Your Details </H2>
+        <hr style="color: rgb(0, 0, 0);">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Bio</label>
+          <textarea class="form-control" name = "bio" required placeholder="Write about yourself" maxlength="200"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+          <input name = "dob" type="date" class="form-control" required>
+        </div> 
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Add your Pic</label>
+            <input type= "file" name = "profile_pic" class="form-control">
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-success">Create</button>
+            </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+    Home page
+{% endblock title %}
+{% block start %}
+
+<div class = "container mt-5" style >
+    <form class="col-6 mx-auto p-3 shadow-lg" method="POST" enctype="multipart/form-data" style="background-color: rgb(255, 255, 255);border-radius: 8%;">
+      {% csrf_token %}
+        <H2>Add Recepie</H2>
+        <hr style="color: rgb(0, 0, 0);">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Recepie Name</label>
+          <input name = "recipe_name" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ingridents Required</label>
+          <textarea class="form-control" name = "recipe_ingridents" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1"  class="form-label">Recepie Description</label>
+          <textarea class="form-control" name = "recipe_description" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Instructions</label>
+          <textarea class="form-control" name = "instructions" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Cooking Time</label>
+          <input name = "cooking_time" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Recepie Image</label>
+            <input type= "file" name = "recipe_image" class="form-control">
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-success">Add Recipe</button>
+        </div>
+      </form>
+      <br><br>
+      <div class="mb-3 d-grid gap-2 col-6 mx-auto text-center">
+        <a href = "/viewrecipe/" >
+        <button type="submit" class="btn btn-primary vertical-center">View Recepies</button>
+      </a>
+      </div>
+</div>
+{% endblock %}

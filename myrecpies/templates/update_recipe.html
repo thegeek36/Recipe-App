@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+    Update Recepie
+{% endblock title %}
+{% block start %}
+
+<div class = "container mt-5" style >
+    <form class="col-6 mx-auto p-3 shadow-lg" method="POST" enctype="multipart/form-data" style="background-color: rgb(255, 255, 255);border-radius: 5%;">
+      {% csrf_token %}
+        <H2>Update Recipe</H2>
+        <hr style="color: rgb(0, 0, 0);">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Recepie Name</label>
+          <input name = "recipe_name" value = "{{recipe.recipe_name}}" type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1"  class="form-label">Recepie Description</label>
+          <textarea class="form-control"  name = "recipe_description" required>{{recipe.recipe_description}}</textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ingridents Required</label>
+          <textarea class="form-control" name = "recipe_ingridents" required>{{recipe.recipe_ingridents}}</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Instructions</label>
+          <textarea class="form-control" name = "instructions" required>{{recipe.instructions}}</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Cooking Time</label>
+          <input name = "cooking_time" type="text" value = "{{recipe.cooking_time}}"class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Recepie Image(Choose Image if you want to update else leave it)</label>
+            <input type= "file" name = "recipe_image" class="form-control">
+          </div>
+
+          <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-success">Update Recipe</button>
+        </div>
+      </form>
+      <br><br>
+    <p align = "center"></p>
+
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+<div style=" position: relative;padding:2%">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      <!-- row row-cols-1 row-cols-md-3 g-4 -->
+    {% for recipe in recipes %}
+      {% if recipe.user == request.user %}
+        <div class="row-4">
+          <!-- <div class="card h-100" style="width: 18rem;"> -->
+            <div class="card h-100">
+              <div class="view overlay">
+                <img class="card-img-top" src="/media/{{recipe.recipe_image}}" alt="Card image cap" style="width: 100%;height: 15vw;object-fit: cover;">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <!-- Title -->
+                <h5 class="card-title">{{recipe.recipe_name}}</h5>
+                <!-- Text -->
+                <p class="card-text">Created by: <a href="/profile/{{request.user.id}}" style="text-decoration: none;">{{recipe.user.username}}</a></p>
+                <!-- Button -->
+                <a href="/recipe_detail/{{recipe.id}}/" class="btn btn-outline-success" id="bt1">View</a>
+                <a href="/delete_recipe/{{recipe.id}}/" class="btn btn-outline-danger" id="bt2">Delete</a>
+                <a href="/update_recipe/{{recipe.id}}" class="btn btn-outline-warning" id="bt3">Edit</a>
+              </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="row-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="/media/{{recipe.recipe_image}}" alt="Card image cap" style="width: 100%;height: 15vw;object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">{{recipe.recipe_name}}</h5>
+              <p class="card-text">Created by: <a href="/profile/{{recipe.user.id}}" style="text-decoration: none;">{{recipe.user.username}}</a></p>
+              <a href="/recipe_detail/{{recipe.id}}/" class="btn btn-outline-success" id="bt">View</a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>

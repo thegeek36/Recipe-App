@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+    Search{{search}}
+{% endblock title %}
+{% block start %}
+    
+<div class="mb-3">
+<form class="d-flex mb-3" style="padding-top:3%;padding-left: 3%;padding-right: 3%;padding-bottom: 1%;">
+    <input class="form-control me-2" type="search" placeholder="I want to make" aria-label="Search" name="search">
+    <button class="btn btn btn-warning" type="submit">Search</button>
+</form>
+</div>
+<hr>
+<!-- <h2 style="text-align: center;color: #000000;background-color: #d6da4c;">Search over 1000+ Recepies!!</h1>
+<hr> -->
+
+{% if recipes %}
+    {% include 'card.html' %}
+{% else %}
+<div style="align-items: center;justify-content: center;height:60vh;">
+<div class="col-3">
+    <div class="card h-100" style="width: 25rem;height:35rem; text-align: center;border-color: #000000; font-family: 'Segoe UI', sans-serif;">
+      <div class="card-body">
+        <h5 class="card-title">OOPS!<br>
+            NO MATCHES.</h5>
+        <p class="card-text">Try Some other keywords instead</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+{% endblock %}
