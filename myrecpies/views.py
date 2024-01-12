@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
 from .models import* 
 from django.db.models import Avg
 from django.contrib import messages
@@ -74,6 +74,7 @@ def update_recipe(request,id):
         return redirect('/viewrecipe/')
     context = {'recipe':queryset}
     return render(request,"update_recipe.html",context)
+
 
 def recipe_detail(request,id):
     queryset = Recipe.objects.get(id=id)
@@ -152,7 +153,7 @@ def register(request):
                                    username=username)
         user.set_password(password)
         user.save()
-        messages.success(request, 'Account Created Successfully')
+        messages.success(request,'Account Created Successfully')
         return redirect('/register/')
     
     return render(request,"register.html")
